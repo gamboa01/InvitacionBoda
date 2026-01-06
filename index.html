@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Invitación de Boda | Guillermo y Jenifer</title>
+  <meta name="description" content="Invitación de boda de Guillermo y Jenifer" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Invitación</span>
+      </div>
+      <nav class="nav" aria-label="Secciones">
+        <a href="#detalles">Detalles</a>
+        <a href="#itinerario">Horario</a>
+        <a href="#rsvp">Confirmar</a>
+        <a href="#regalos">Un detalle</a>
+        <a href="#galeria">Galería</a>
+      </nav>
+    </div>
+
+    <header class="hero" id="inicio">
+      <div class="hero-inner">
+        <div>
+          <div class="kicker">Nos casamos</div>
+          <h1><span id="novio">Guillermo</span> y <span id="novia">Jenifer</span></h1>
+          <p class="subtitle">
+            Con mucha alegría queremos invitarte a compartir este día tan especial con nosotros.
+            Será un momento sencillo, familiar y lleno de cariño. Nos encantará verte ahí.
+          </p>
+
+          <div class="pillrow">
+            <div class="pill"><strong id="fechaTexto">Viernes, 20 de febrero de 2026</strong></div>
+            <div class="pill"><span>Hora:</span> <strong id="horaTexto">12:00 p.m.</strong></div>
+          </div>
+
+          <div class="pillrow">
+            <a class="btn primary" href="#rsvp">Confirmar asistencia</a>
+            <a class="btn" id="btnMapa" href="#detalles">Ver ubicación</a>
+          </div>
+        </div>
+
+        <div class="countcard" aria-live="polite">
+          <div class="counttitle">Faltan</div>
+          <div class="countgrid" id="countdown">
+            <div class="unit"><div class="n" id="d">0</div><div class="l">Días</div></div>
+            <div class="unit"><div class="n" id="h">0</div><div class="l">Horas</div></div>
+            <div class="unit"><div class="n" id="m">0</div><div class="l">Min</div></div>
+            <div class="unit"><div class="n" id="s">0</div><div class="l">Seg</div></div>
+          </div>
+          <div class="notice" id="countMsg">
+            Guarda esta invitación. Aquí encontrarás la información actualizada.
+          </div>
+          <div class="ctaRow">
+            <a class="btn" id="btnWhatsapp" href="#" rel="noopener">Confirmar por WhatsApp</a>
+            <button class="btn" id="btnAgregar">Agregar al calendario</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="detalles">
+      <div class="secHead">
+        <h2>Detalles del evento</h2>
+        <div class="tag">Lugar, horario y recomendaciones</div>
+      </div>
+      <div class="secBody">
+        <div class="grid2">
+          <div class="card">
+            <h3>Ubicación</h3>
+            <p>
+              <strong id="lugarNombre">Eventos La Arboleda</strong><br />
+              <span id="lugarDireccion">Presiona el botón para abrir la ubicación.</span>
+            </p>
+            <p style="margin-top:10px">
+              <a class="btn" id="linkMapa" href="#" target="_blank" rel="noopener">Abrir en Waze</a>
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Dress code</h3>
+            <p id="dressCode">Formal</p>
+            <p style="margin-top:10px">
+              <span class="muted" id="notaDress">Te sugerimos tonos claros y cómodos.</span>
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Horario</h3>
+            <p>
+              Llegada sugerida: <strong id="llegadaTexto">11:30 a.m.</strong><br />
+              Inicio: <strong id="inicioTexto">12:00 p.m.</strong><br />
+              Cierre estimado: <strong id="cierreTexto">4:00 p.m.</strong>
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Niños</h3>
+            <p id="ninosTexto">Esta celebración es solo para adultos.</p>
+          </div>
+        </div>
+
+        <div style="height:12px"></div>
+
+<div class="card">
+  <h3>Mapa</h3>
+  <p class="muted">
+    Puedes ver la ubicación aquí o abrirla directamente en Waze.
+  </p>
+
+  <div style="height:10px"></div>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d618.8860567122478!2d-90.46871586074757!3d14.52025892719416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a506a16dae5d%3A0x8848c74b2dabcc1a!2sEventos%20La%20Arboleda!5e0!3m2!1ses!2sgt!4v1767709411481!5m2!1ses!2sgt" width="100%" height="320" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  <div style="height:10px"></div>
+
+  <a class="btn" href="https://waze.com/ul/h9fxdtmyzr" target="_blank" rel="noopener">
+    Abrir en Waze
+  </a>
+</div>
+
+    </section>
+
+    <section id="itinerario">
+      <div class="secHead">
+        <h2>Horario</h2>
+        <div class="tag">Momentos del día</div>
+      </div>
+      <div class="secBody">
+        <ul class="list" id="listaItinerario">
+          <li class="item">
+            <div class="left">
+              <div class="title">Recepción</div>
+              <div class="sub">Bienvenida y acomodo</div>
+            </div>
+            <div class="right">11:30 a.m.</div>
+          </li>
+          <li class="item">
+            <div class="left">
+              <div class="title">Ceremonia</div>
+              <div class="sub">Inicio</div>
+            </div>
+            <div class="right">12:00 p.m.</div>
+          </li>
+          <li class="item">
+            <div class="left">
+              <div class="title">Almuerzo</div>
+              <div class="sub">Servicio a mesa</div>
+            </div>
+            <div class="right">1:30 p.m.</div>
+          </li>
+          <li class="item">
+            <div class="left">
+              <div class="title">Fotos</div>
+              <div class="sub">Momento especial</div>
+            </div>
+            <div class="right">3:00 p.m.</div>
+          </li>
+          <li class="item">
+            <div class="left">
+              <div class="title">Despedida</div>
+              <div class="sub">Cierre</div>
+            </div>
+            <div class="right">4:00 p.m.</div>
+          </li>
+        </ul>
+
+        <div class="hr"></div>
+        <div class="notice">
+          Será una celebración tranquila para compartir y disfrutar en familia.
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp">
+      <div class="secHead">
+        <h2>Confirmación de asistencia</h2>
+        <div class="tag"></div>
+      </div>
+      <div class="secBody">
+        <div class="grid2">
+          <div class="card">
+            <h3>Formulario</h3>
+            <p class="muted">
+              Te generará un mensaje listo para enviarlo por WhatsApp.
+            </p>
+            <div style="height:10px"></div>
+
+            <div class="formRow">
+              <div>
+                <label class="muted" for="nombreInv">Nombre y apellido</label>
+                <input id="nombreInv" placeholder="Ej. Ana Pérez" />
+              </div>
+              <div>
+                <label class="muted" for="asistencia">Asistencia</label>
+                <select id="asistencia">
+                  <option value="Sí, asistiré">Sí, asistiré</option>
+                  <option value="No podré asistir">No podré asistir</option>
+                  <option value="Confirmo más adelante">Confirmo más adelante</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="height:12px"></div>
+
+            <div class="formRow">
+              <div>
+                <label class="muted" for="acompanantes">Cantidad de personas</label>
+                <input id="acompanantes" type="number" min="1" max="10" value="1" />
+              </div>
+              <div>
+                <label class="muted" for="notaCorta">Nota (opcional)</label>
+                <input id="notaCorta" placeholder="Ej. ¡Felicidades!" />
+              </div>
+            </div>
+
+            <div style="height:12px"></div>
+
+            <label class="muted" for="notaLarga">Mensaje (opcional)</label>
+            <textarea id="notaLarga" placeholder="Si quieres, escribe un mensaje más largo..."></textarea>
+
+            <div style="height:12px"></div>
+
+            <div class="ctaRow">
+              <button class="btn primary" id="btnRSVP">Enviar por WhatsApp</button>
+              <button class="btn" id="btnCopiar">Copiar mensaje</button>
+            </div>
+
+            <p class="muted" id="msgEstado" style="margin-top:10px"></p>
+          </div>
+
+          <div class="card">
+            <h3>Contacto</h3>
+            <p class="muted">
+              También puedes confirmar directamente por WhatsApp.
+            </p>
+            <div style="height:10px"></div>
+            <div class="pillrow">
+              <div class="pill"><span>WhatsApp:</span> <strong id="whatsTexto">+502 3951-7765</strong></div>
+              <div class="pill"><span>Fecha límite:</span> <strong id="fechaLimite">31/01/2026</strong></div>
+            </div>
+            <div style="height:10px"></div>
+            <div class="notice">
+              Por favor indícanos cuántas personas asistirán para organizar la mesa.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="regalos">
+      <div class="secHead">
+        <h2>Un detalle (opcional)</h2>
+        <div class="tag">Con tu presencia es suficiente</div>
+      </div>
+      <div class="secBody">
+        <div class="grid2">
+          <div class="card">
+            <h3>Lo más importante</h3>
+            <p class="muted">
+              Tu presencia es el mejor regalo. De verdad.
+            </p>
+            <div style="height:10px"></div>
+            <div class="notice">
+              Si quieres tener un detalle, lo recibimos con mucho cariño, sin compromiso.
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Si lo deseas</h3>
+            <p class="muted">
+              Si más adelante definimos una opción (lista o detalle simbólico), la colocaremos aquí de forma discreta.
+            </p>
+            <div style="height:10px"></div>
+            <a class="btn" id="linkRegalos" href="#" target="_blank" rel="noopener">Ver información</a>
+            <p class="muted" style="margin-top:10px">
+              Puedes ignorar esta sección sin problema.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <div class="secHead">
+        <h2>Galería</h2>
+        <div class="tag">Fotos</div>
+      </div>
+      <div class="secBody">
+        <div class="gallery">
+          <div class="ph">Foto 1</div>
+          <div class="ph">Foto 2</div>
+          <div class="ph">Foto 3</div>
+          <div class="ph">Foto 4</div>
+          <div class="ph">Foto 5</div>
+          <div class="ph">Foto 6</div>
+        </div>
+        <p class="muted" style="margin-top:10px">
+          Un poco de nuestra historia.
+        </p>
+      </div>
+    </section>
+
+    <section id="notas">
+      <div class="secHead">
+        <h2>Notas</h2>
+        <div class="tag">Información adicional</div>
+      </div>
+      <div class="secBody">
+        <div class="notice" id="notaGeneral">
+          Si tienes dudas, escríbenos por WhatsApp. Gracias por acompañarnos.
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      Guillermo y Michel. Hecho con cariño.
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
