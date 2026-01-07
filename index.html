@@ -9,8 +9,11 @@
 <link rel="icon" type="image/png" sizes="32x32" href="Imagenes/Iconos/favicon.png">
 
   <link rel="stylesheet" href="css/styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class=\"theme-luxe\">
   <div class="wrap">
     <div class="topbar">
       <div class="brand">
@@ -19,14 +22,14 @@
       </div>
       <nav class="nav" aria-label="Secciones">
         <a href="#detalles">Detalles</a>
-        <a href="#itinerario">Horario</a>
         <a href="#rsvp">Confirmar</a>
         <a href="#regalos">Un detalle</a>
         <a href="#galeria">Galería</a>
       </nav>
     </div>
 
-    <header class="hero" id="inicio">
+    <header class="hero" id="inicio" data-monogram="GJ">
+      <div class="sparkles" aria-hidden="true"></div>
       <div class="hero-inner">
         <div>
           <div class="kicker">Nos casamos</div>
@@ -43,7 +46,6 @@
 
           <div class="pillrow">
             <a class="btn primary" href="#rsvp">Confirmar asistencia</a>
-            <a class="btn" id="btnMapa" href="#detalles">Ver ubicación</a>
           </div>
         </div>
 
@@ -59,7 +61,6 @@
             Guarda esta invitación. Aquí encontrarás la información actualizada.
           </div>
           <div class="ctaRow">
-            <a class="btn" id="btnWhatsapp" href="#" rel="noopener">Confirmar por WhatsApp</a>
             <button class="btn" id="btnAgregar">Agregar al calendario</button>
           </div>
         </div>
@@ -74,16 +75,13 @@
       <div class="secBody">
         <div class="grid2">
           <div class="card">
-            <h3>Ubicación</h3>
+            <h3>Horario</h3>
             <p>
-              <strong id="lugarNombre">Eventos La Arboleda</strong><br />
-              <span id="lugarDireccion">Presiona el botón para abrir la ubicación.</span>
-            </p>
-            <p style="margin-top:10px">
-              <a class="btn" id="linkMapa" href="#" target="_blank" rel="noopener">Abrir en Waze</a>
+              Llegada sugerida: <strong id="llegadaTexto">11:30 a.m.</strong><br />
+              Inicio: <strong id="inicioTexto">12:00 p.m.</strong><br />
+              Cierre estimado: <strong id="cierreTexto">4:30 p.m.</strong>
             </p>
           </div>
-
           <div class="card">
             <h3>Dress code</h3>
             <p id="dressCode">Formal</p>
@@ -92,25 +90,17 @@
             </p>
           </div>
 
-          <div class="card">
-            <h3>Horario</h3>
-            <p>
-              Llegada sugerida: <strong id="llegadaTexto">11:30 a.m.</strong><br />
-              Inicio: <strong id="inicioTexto">12:00 p.m.</strong><br />
-              Cierre estimado: <strong id="cierreTexto">4:00 p.m.</strong>
-            </p>
-          </div>
 
-          <div class="card">
-            <h3>Niños</h3>
-            <p id="ninosTexto">Esta celebración es solo para adultos.</p>
-          </div>
         </div>
 
         <div style="height:12px"></div>
 
 <div class="card">
-  <h3>Mapa</h3>
+  <h3>Ubicación</h3>
+              <p>
+              <strong id="lugarNombre">Eventos La Arboleda</strong><br />
+
+            </p>
   <p class="muted">
     Puedes ver la ubicación aquí o abrirla directamente en Waze.
   </p>
@@ -128,56 +118,6 @@
 
     </section>
 
-    <section id="itinerario">
-      <div class="secHead">
-        <h2>Horario</h2>
-        <div class="tag">Momentos del día</div>
-      </div>
-      <div class="secBody">
-        <ul class="list" id="listaItinerario">
-          <li class="item">
-            <div class="left">
-              <div class="title">Recepción</div>
-              <div class="sub">Bienvenida y acomodo</div>
-            </div>
-            <div class="right">11:30 a.m.</div>
-          </li>
-          <li class="item">
-            <div class="left">
-              <div class="title">Ceremonia</div>
-              <div class="sub">Inicio</div>
-            </div>
-            <div class="right">12:00 p.m.</div>
-          </li>
-          <li class="item">
-            <div class="left">
-              <div class="title">Almuerzo</div>
-              <div class="sub">Servicio a mesa</div>
-            </div>
-            <div class="right">1:30 p.m.</div>
-          </li>
-          <li class="item">
-            <div class="left">
-              <div class="title">Fotos</div>
-              <div class="sub">Momento especial</div>
-            </div>
-            <div class="right">3:00 p.m.</div>
-          </li>
-          <li class="item">
-            <div class="left">
-              <div class="title">Despedida</div>
-              <div class="sub">Cierre</div>
-            </div>
-            <div class="right">4:00 p.m.</div>
-          </li>
-        </ul>
-
-        <div class="hr"></div>
-        <div class="notice">
-          Será una celebración tranquila para compartir y disfrutar en familia.
-        </div>
-      </div>
-    </section>
 
     <section id="rsvp">
       <div class="secHead">
@@ -203,7 +143,6 @@
                 <select id="asistencia">
                   <option value="Sí, asistiré">Sí, asistiré</option>
                   <option value="No podré asistir">No podré asistir</option>
-                  <option value="Confirmo más adelante">Confirmo más adelante</option>
                 </select>
               </div>
             </div>
@@ -230,7 +169,6 @@
 
             <div class="ctaRow">
               <button class="btn primary" id="btnRSVP">Enviar por WhatsApp</button>
-              <button class="btn" id="btnCopiar">Copiar mensaje</button>
             </div>
 
             <p class="muted" id="msgEstado" style="margin-top:10px"></p>
@@ -243,8 +181,8 @@
             </p>
             <div style="height:10px"></div>
             <div class="pillrow">
-              <div class="pill"><span>WhatsApp:</span> <strong id="whatsTexto">+502 3951-7765</strong></div>
-              <div class="pill"><span>Fecha límite:</span> <strong id="fechaLimite">31/01/2026</strong></div>
+              <div class="pill"><span>WhatsApp:</span> <strong id="whatsTexto">+502 4611-6969</strong></div>
+              <div class="pill"><span>Fecha límite:</span> <strong id="fechaLimite">10/02/2026</strong></div>
             </div>
             <div style="height:10px"></div>
             <div class="notice">
@@ -325,6 +263,9 @@
       Guillermo y Michel. Hecho con cariño.
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
 
   <script src="js/app.js"></script>
 </body>
