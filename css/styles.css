@@ -366,10 +366,9 @@ header.hero::before{
 @media (max-width:860px){
   header.hero::before{
     right: 2%;
-    bottom: -10%;
+    bottom: -4%;
     font-size: 168px;
   }
-}
 }
 
 /* Separadores dorados entre secciones */
