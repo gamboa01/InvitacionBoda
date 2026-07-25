@@ -557,3 +557,113 @@ section::before{
   .timeline-dot{left:-26px}
   .year-badge{font-size:30px; min-width:60px}
 }
+
+/* ===== Categorías de ahorro (colores de propósito) ===== */
+:root{
+  --cat-reserva:#b88a2b;
+  --cat-carro:#8c6d46;
+  --cat-casa:#6f8f6a;
+  --cat-electro:#748aa6;
+  --cat-boda:#c98a9a;
+}
+
+.cat-icon{margin-right:6px}
+
+.cat-complete{color:var(--gold-ink); font-weight:600}
+
+/* Franja de color por categoría en los hitos financieros */
+.item{border-left:4px solid transparent}
+.item.cat-reserva{border-left-color:var(--cat-reserva)}
+.item.cat-carro{border-left-color:var(--cat-carro)}
+.item.cat-casa{border-left-color:var(--cat-casa)}
+.item.cat-electro{border-left-color:var(--cat-electro)}
+.item.cat-boda{border-left-color:var(--cat-boda)}
+.item.destacado.cat-boda{border-left-color:var(--cat-boda)}
+
+/* ===== Leyenda ===== */
+.cat-legend{
+  display:flex; flex-wrap:wrap; gap:8px 16px;
+  margin-bottom:18px;
+  font-size:12px; color:var(--muted);
+}
+.legend-item{display:inline-flex; align-items:center; gap:6px}
+.legend-dot{width:9px; height:9px; border-radius:50%; display:inline-block}
+.legend-item.cat-reserva .legend-dot{background:var(--cat-reserva)}
+.legend-item.cat-carro .legend-dot{background:var(--cat-carro)}
+.legend-item.cat-casa .legend-dot{background:var(--cat-casa)}
+.legend-item.cat-electro .legend-dot{background:var(--cat-electro)}
+.legend-item.cat-boda .legend-dot{background:var(--cat-boda)}
+
+/* ===== Grid mensual (12 meses por año) ===== */
+.month-grid{
+  display:grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap:8px;
+  margin:14px 0 18px;
+}
+@media (max-width:720px){ .month-grid{grid-template-columns: repeat(4,1fr)} }
+@media (max-width:420px){ .month-grid{grid-template-columns: repeat(3,1fr)} }
+
+.month-cell{
+  position:relative;
+  overflow:hidden;
+  border-radius:10px;
+  padding:8px 6px 8px 10px;
+  text-align:center;
+  border:1px solid rgba(240,227,198,.9);
+  background: rgba(255,255,255,.75);
+}
+.month-cell::before{
+  content:"";
+  position:absolute; left:0; top:0; bottom:0; width:4px;
+  background: rgba(184,138,43,.25);
+}
+.month-cell.cat-reserva::before{background:var(--cat-reserva)}
+.month-cell.cat-carro::before{background:var(--cat-carro)}
+.month-cell.cat-casa::before{background:var(--cat-casa)}
+.month-cell.cat-electro::before{background:var(--cat-electro)}
+.month-cell.cat-boda::before{background:var(--cat-boda)}
+
+.month-cell .mc-month{display:block; font-weight:650; color:var(--text); font-size:12px}
+.month-cell .mc-total{display:block; margin-top:3px; font-size:10px; color:var(--muted)}
+
+/* ===== Segmentos (motivo dentro del año) ===== */
+.segment-list{display:grid; gap:10px; margin:0 0 18px}
+
+.segment-item{
+  border:1px solid rgba(240,227,198,.9);
+  border-left:4px solid rgba(240,227,198,.9);
+  border-radius:14px;
+  padding:12px 14px;
+  background: rgba(255,255,255,.82);
+  display:flex; flex-direction:column; gap:8px;
+  box-shadow: 0 12px 24px rgba(0,0,0,.05);
+}
+.segment-item.cat-reserva{border-left-color:var(--cat-reserva)}
+.segment-item.cat-carro{border-left-color:var(--cat-carro)}
+.segment-item.cat-casa{border-left-color:var(--cat-casa)}
+.segment-item.cat-electro{border-left-color:var(--cat-electro)}
+.segment-item.cat-boda{border-left-color:var(--cat-boda)}
+
+.segment-item .seg-top{
+  display:flex; justify-content:space-between; align-items:baseline; gap:10px; flex-wrap:wrap;
+}
+.segment-item .seg-motivo{font-weight:700; color:var(--text)}
+.segment-item .seg-rango{color:var(--muted); font-size:12px}
+.segment-item .seg-aporte{color:var(--gold-ink); font-weight:650; font-size:13px; white-space:nowrap}
+
+.segment-item .seg-meta-row{
+  display:flex; justify-content:space-between; align-items:center; gap:10px;
+  font-size:12px; color:var(--muted);
+}
+.segment-item .seg-status.completado{color:#4f7a52; font-weight:600}
+.segment-item .seg-status.encurso{color:var(--gold-ink); font-weight:600}
+
+.mini-track{height:6px; border-radius:999px; background: rgba(184,138,43,.12); overflow:hidden}
+.mini-fill{height:100%; border-radius:999px; background: linear-gradient(90deg, var(--gold-2), var(--gold)); transition: width 900ms var(--ease)}
+
+/* ===== Progreso del plan total dentro de cada año ===== */
+.year-progress{margin-top:6px}
+.year-progress-label{display:flex; justify-content:space-between; font-size:12px; color:var(--muted); margin-bottom:6px}
+.progress-track{height:8px; border-radius:999px; background: rgba(184,138,43,.12); overflow:hidden}
+.progress-fill{height:100%; border-radius:999px; background: linear-gradient(90deg, var(--gold-2), var(--gold)); transition: width 900ms var(--ease)}
